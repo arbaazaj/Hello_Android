@@ -5,36 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    var titleName: String? = "Avengers"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.scrollview_example)
 
-        println("onCreate called")
-    }
+        if (intent != null) {
+            intent.getStringExtra("Name")
+        }
 
-
-    override fun onStart() {
-        super.onStart()
-        println("onStart called")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        println("onResume called")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        println("onPause called")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        println("onStop called")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        println("onDestroy called")
+        title = titleName
     }
 }
