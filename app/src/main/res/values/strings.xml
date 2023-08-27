@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">Hello Android</string>
+    <string name="app_name">Hello World</string>
+    <string name="new_app_name">Avengers</string>
 
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh.</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -37,10 +49,27 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string-array name="starNames">
+        <item>Tony Stark</item>
+        <item>Steve Rogers</item>
+        <item>Black Panther</item>
+        <item>Hulk</item>
+        <item>Thor</item>
+        <item>Black Widow</item>
+    </string-array>
+    <string-array name="emailIDs">
+        <item>tony@starkindustries.com</item>
+        <item>steve@gmail.com</item>
+    </string-array>
     <string name="star_name">Tony Stark</string>
     <string name="email">tony@starkindustries.com</string>
     <string name="phone_number">+91 11155555</string>
     <string name="image_description">A beautiful image</string>
     <string name="button_text">Click Me</string>
+    <string name="hint_mobile_number">Enter Mobile No</string>
+    <string name="hint_password">Password</string>
     <string name="hint_name">Enter your name</string>
+    <string name="btn_login_text">Login</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="txt_register">Don\'t have an Account? Register</string>
 </resources>

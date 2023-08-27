@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:title="The Avengers"
+            android:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/tony_stark_new" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImg"
+                android:padding="8dp"
+                android:text="@string/star_name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:layout_toEndOf="@id/imgProfileImg"
+                android:padding="8dp"
+                android:text="@string/email"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/user_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_email"
+
+                android:layout_toEndOf="@id/imgProfileImg"
+                android:padding="8dp"
+                android:text="@string/phone_number"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImgSteve"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/captain_america" />
+
+            <TextView
+                android:id="@+id/usernameSteve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImgSteve"
+                android:padding="8dp"
+                android:text="Steve Rogers"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailSteve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameSteve"
+                android:layout_toEndOf="@id/imgProfileImgSteve"
+                android:padding="8dp"
+                android:text="steve@gmail.com"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/userPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userEmailSteve"
+                android:layout_toEndOf="@id/imgProfileImgSteve"
+                android:padding="8dp"
+                android:text="45888555"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImgBP"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/black_panther" />
+
+            <TextView
+                android:id="@+id/usernameBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImgBP"
+                android:padding="8dp"
+                android:text="Black Panther"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameBP"
+                android:layout_toEndOf="@id/imgProfileImgBP"
+                android:padding="8dp"
+                android:text="bp@wakanda.com"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/userPhoneNumberBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userEmailBP"
+
+                android:layout_toEndOf="@id/imgProfileImgBP"
+                android:padding="8dp"
+                android:text="1115556668"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImgHulk"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/hulk" />
+
+            <TextView
+                android:id="@+id/usernameHulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImgHulk"
+                android:padding="8dp"
+                android:text="Hulk"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailHulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameHulk"
+                android:layout_toEndOf="@id/imgProfileImgHulk"
+                android:padding="8dp"
+                android:text="bruce@hulk.com"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/userPhoneNumberHulk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userEmailHulk"
+
+                android:layout_toEndOf="@id/imgProfileImgHulk"
+                android:padding="8dp"
+                android:text="665577789"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImgThor"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/thor" />
+
+            <TextView
+                android:id="@+id/usernameThor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImgThor"
+                android:padding="8dp"
+                android:text="Thor Odin Son"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailThor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameThor"
+                android:layout_toEndOf="@id/imgProfileImgThor"
+                android:padding="8dp"
+                android:text="thor@bifrost.com"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/userPhoneNumberThor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userEmailThor"
+                android:layout_toEndOf="@id/imgProfileImgThor"
+                android:padding="8dp"
+                android:text="Classified"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProfileImgWidow"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/widow" />
+
+            <TextView
+                android:id="@+id/usernameWidow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/imgProfileImgWidow"
+                android:padding="8dp"
+                android:text="Black Widow"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailWidow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameWidow"
+                android:layout_toEndOf="@id/imgProfileImgWidow"
+                android:padding="8dp"
+                android:text="bw@russia.com"
+                android:textColor="#800080"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/userPhoneNumberWidow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userEmailWidow"
+                android:layout_toEndOf="@id/imgProfileImgWidow"
+                android:padding="8dp"
+                android:text="0088785469"
+                android:textColor="#008080"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
