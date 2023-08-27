@@ -1,6 +1,8 @@
 package com.internshala.helloandroid
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -19,9 +21,23 @@ class LoginActivity : AppCompatActivity() {
     private val validMobileNumber = "123"
     private val validPassword = arrayOf("tony", "steve", "bruce", "thor", "thanos")
 
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.preference_file_name), Context.MODE_PRIVATE)
+
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+
+        if (isLoggedIn) {
+            val intent = Intent(this@LoginActivity, AvengersActivity::class.java)
+            startActivity(intent)
+        } else {
+            setContentView(R.layout.activity_login)
+        }
+
         title = "Login"
 
         etMobileNumber = findViewById(R.id.etMobileNumber)
@@ -45,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
                         // If Tony Stark
                         nameOfAvenger = "Iron Man"
                         intent.putExtra("Name", nameOfAvenger)
+                        savePreference()
                         startActivity(intent)
                     }
 
@@ -52,6 +69,7 @@ class LoginActivity : AppCompatActivity() {
                         // If Steve Rogers
                         nameOfAvenger = "Captain America"
                         intent.putExtra("Name", nameOfAvenger)
+                        savePreference()
                         startActivity(intent)
                     }
 
@@ -59,6 +77,7 @@ class LoginActivity : AppCompatActivity() {
                         // If Hulk
                         nameOfAvenger = "Hulk"
                         intent.putExtra("Name", nameOfAvenger)
+                        savePreference()
                         startActivity(intent)
                     }
 
@@ -66,6 +85,7 @@ class LoginActivity : AppCompatActivity() {
                         // If Thor
                         nameOfAvenger = "Thor"
                         intent.putExtra("Name", nameOfAvenger)
+                        savePreference()
                         startActivity(intent)
                     }
 
@@ -73,6 +93,7 @@ class LoginActivity : AppCompatActivity() {
                         // Any other Avengers
                         nameOfAvenger = "Other Avengers"
                         intent.putExtra("Name", nameOfAvenger)
+                        savePreference()
                         startActivity(intent)
                     }
                 }
@@ -88,6 +109,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         finish()
+    }
+
+    private fun savePreference() {
+        sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
     }
 
 }
