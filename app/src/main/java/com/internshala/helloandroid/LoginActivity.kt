@@ -12,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
+    // Declaring variables.
     private lateinit var etMobileNumber: EditText
     private lateinit var etPassword: EditText
     private lateinit var btLogin: Button
     private lateinit var txtForgotPassword: TextView
     private lateinit var txtRegister: TextView
-
     private val validMobileNumber = "123"
     private val validPassword = arrayOf("tony", "steve", "bruce", "thor", "thanos")
 
@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Initializing sharedPreferences.
         sharedPreferences =
             getSharedPreferences(getString(R.string.preference_file_name), Context.MODE_PRIVATE)
 
@@ -40,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
 
         title = "Login"
 
+        // Finding views by ids.
         etMobileNumber = findViewById(R.id.etMobileNumber)
         etPassword = findViewById(R.id.etPassword)
         btLogin = findViewById(R.id.btnLogin)
@@ -47,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
         txtForgotPassword = findViewById(R.id.txtForgotPassword)
 
 
+        // Button and other click events.
         btLogin.setOnClickListener {
             val mobileNumber = etMobileNumber.text.toString()
             val password = etPassword.text.toString()
@@ -99,6 +102,18 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        // When clicked on Forgot Password text this event will trigger.
+        txtForgotPassword.setOnClickListener {
+            val intentForgotPassword = Intent(this@LoginActivity, ForgotPassword::class.java)
+            startActivity(intentForgotPassword)
+        }
+
+        // When clicked on Register text this event will trigger.
+        txtRegister.setOnClickListener {
+            val intentRegistration = Intent(this@LoginActivity, RegistrationActivity::class.java)
+            startActivity(intentRegistration)
+        }
+
     }
 
     override fun onPause() {
@@ -106,6 +121,7 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
+    // SharedPreference to set the initial login state of a user and also passing the title text.
     private fun savePreference(title: String) {
         sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
         sharedPreferences.edit().putString("title", title).apply()
