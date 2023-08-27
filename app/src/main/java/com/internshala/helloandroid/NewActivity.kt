@@ -16,6 +16,9 @@ class NewActivity : AppCompatActivity() {
     lateinit var txtForgotPassword: TextView
     lateinit var txtRegister: TextView
 
+    val validMobileNumber = "1234567890"
+    val validPassword = "thanos"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new)
@@ -27,15 +30,18 @@ class NewActivity : AppCompatActivity() {
         txtRegister = findViewById(R.id.txtRegister)
         txtForgotPassword = findViewById(R.id.txtForgotPassword)
 
-        btLogin.setOnClickListener {
-            Toast.makeText(
-                this@NewActivity,
-                "Button Clicked",
-                Toast.LENGTH_LONG
-            ).show()
 
-            val intent = Intent(this@NewActivity, MainActivity::class.java)
-            startActivity(intent)
+        btLogin.setOnClickListener {
+            val mobileNumber = etMobileNumber.text.toString()
+            val password = etPassword.text.toString()
+            if ((mobileNumber == validMobileNumber) && (password == validPassword)) {
+                val intent = Intent(this@NewActivity, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    this@NewActivity, "Incorrect Credentials!", Toast.LENGTH_LONG
+                ).show()
+            }
         }
 
     }
